@@ -50,7 +50,7 @@ class IndividualRest extends React.Component {
     let {ratings} = this.state;
     let updatedRatings = [...ratings,parseFloat(newRating)];
     this.setState({ratings:updatedRatings});
-    let newAveRating = (updatedRatings.reduce( (total, rating) => {return total + rating}, 0) / ratings.length).toFixed(2);
+    let newAveRating = (updatedRatings.reduce( (total, rating) => {return total + rating}, 0) / updatedRatings.length).toFixed(2);
     this.setState({aveRating:newAveRating});
   }
 
